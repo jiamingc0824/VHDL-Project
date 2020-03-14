@@ -1,0 +1,27 @@
+
+
+NET "Data[3]" LOC = M15;
+NET "Data[2]" LOC = P17;
+NET "Data[1]" LOC = R16;
+NET "Data[0]" LOC = R15;
+NET "Clock" LOC = C9;
+NET "Display" LOC = H13;
+NET "Enable" LOC = M18;
+NET "Reset" LOC = D18;
+NET "RS" LOC = L18;
+NET "RW" LOC = L17;
+
+
+NET "Display" PULLDOWN;
+NET "Reset" PULLDOWN;
+
+# PlanAhead Generated physical constraints 
+
+NET "LED[7]" LOC = F9;
+NET "LED[6]" LOC = E9;
+NET "LED[5]" LOC = D11;
+NET "LED[4]" LOC = C11;
+NET "LED[3]" LOC = F11;
+NET "LED[2]" LOC = E11;
+NET "LED[1]" LOC = E12;
+NET "LED[0]" LOC = F12;

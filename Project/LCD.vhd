@@ -53,7 +53,7 @@ architecture Behavioral of LCD is
     signal iStage         : STD_LOGIC                     := '0';
     signal iTransmit      : STD_LOGIC                     := '0';
 
-    signal BCD : STD_LOGIC_VECTOR(23 downto 0) := x"111175";
+    signal BCD : STD_LOGIC_VECTOR(23 downto 0) := x"123475";
 
     constant ResetAddr : STD_LOGIC_VECTOR(7 downto 0) := x"02";
 
@@ -95,28 +95,29 @@ architecture Behavioral of LCD is
     );
 begin
 
-    LED(3 downto 0) <= iCharSent;
-    LED(7 downto 4) <= (others => '0');
-    -- with nextState select LED(3 downto 0) <=
-    --     "0001" when stInit1,
-    --     "0010" when stInit2,
-    --     "0011" when stFunc,
-    --     "0100" when stEntry,
-    --     "0101" when stDisplay,
-    --     "0110" when stClear,
-    --     "0111" when stReady,
-    --     "1000" when stWrite,
-    --     "1001" when stResetAddr,
-    --     "1010" when stComplete,
-    --     "0000" when others;
+    -- LED(3 downto 0) <= iCharSent;
+    -- LED(7 downto 4) <= (others => '0');
+    with presState select LED(3 downto 0) <=
+        "0001" when stInit1,
+        "0010" when stInit2,
+        "0011" when stFunc,
+        "0100" when stEntry,
+        "0101" when stDisplay,
+        "0110" when stClear,
+        "0111" when stReady,
+        "1000" when stWrite,
+        -- "1001" when stWordComplete,
+        "1010" when stResetAddr,
+        "1011" when stComplete,
+        "0000" when others;
 
-    -- LED(6 downto 4) <= "001" when transmitState = stIdle else
-    -- "010" when transmitState = stReady else
-    -- "011" when transmitState = stEnable else
-    -- "100" when transmitState = stWait else
-    -- "101" when transmitState = stComplete else
-    -- "000";
-    -- LED <= iData;
+    LED(6 downto 4) <= "001" when transmitState = stIdle else
+    "010" when transmitState = stReady else
+    "011" when transmitState = stEnable else
+    "100" when transmitState = stWait else
+    "101" when transmitState = stComplete else
+    "000";
+    LED(7) <= isAllTransmit;
 
     RW <= '0';
 
@@ -155,94 +156,122 @@ begin
         end if;
     end process;
 
-    Main_State_Machine : process (presState, isInitStg1, isInitStg2, isFunc, isEntry, isDisplay, isClear, isTransmit, isResetAddr, isAllTransmit, iDisplayEnable)
+    Main_State_Machine : process (presState, Clock)
     begin
         -- iTransmit <= '0';
-        iReset <= '0';
-        case presState is
-            when stInit1 =>
-                if isInitStg1 = '1' then
-                    nextState <= stInit2;
-                else
-                    nextState <= stInit1;
-                    iData     <= InitSeq(0);
-                    -- iTransmit <= '1';
-                end if;
-            when stInit2 =>
-                if isInitStg2 = '1' then
-                    isInit    <= '1';
-                    nextState <= stFunc;
-                else
-                    nextState <= stInit2;
-                    iData     <= InitSeq(1);
-                    -- iTransmit <= '1';
-                end if;
-            when stFunc =>
-                if isFunc = '1' then
-                    nextState <= stEntry;
-                else
-                    nextState <= stFunc;
-                    iData     <= DispConfig(0);
-                    -- iTransmit <= '1';
-                end if;
-            when stEntry =>
-                if isEntry = '1' then
-                    nextState <= stDisplay;
-                else
-                    nextState <= stEntry;
-                    iData     <= DispConfig(1);
-                    -- iTransmit <= '1';
-                end if;
-            when stDisplay =>
-                if isDisplay = '1' then
-                    nextState <= stClear;
-                else
-                    nextState <= stDisplay;
-                    iData     <= DispConfig(2);
-                    -- iTransmit <= '1';
-                end if;
-            when stClear =>
-                if isClear = '1' then
-                    isConfig  <= '1';
+        if Clock'EVENT and Clock = '0' then
+            iReset <= '0';
+            case presState is
+                when stInit1 =>
+                    if isInitStg1 = '1' then
+                        nextState <= stInit2;
+                    else
+                        nextState <= stInit1;
+                        iData     <= InitSeq(0);
+                        -- iTransmit <= '1';
+                    end if;
+                when stInit2 =>
+                    if isInitStg2 = '1' then
+                        isInit    <= '1';
+                        nextState <= stFunc;
+                    else
+                        nextState <= stInit2;
+                        iData     <= InitSeq(1);
+                        -- iTransmit <= '1';
+                    end if;
+                when stFunc =>
+                    if isFunc = '1' then
+                        nextState <= stEntry;
+                    else
+                        nextState <= stFunc;
+                        iData     <= DispConfig(0);
+                        -- iTransmit <= '1';
+                    end if;
+                when stEntry =>
+                    if isEntry = '1' then
+                        nextState <= stDisplay;
+                    else
+                        nextState <= stEntry;
+                        iData     <= DispConfig(1);
+                        -- iTransmit <= '1';
+                    end if;
+                when stDisplay =>
+                    if isDisplay = '1' then
+                        nextState <= stClear;
+                    else
+                        nextState <= stDisplay;
+                        iData     <= DispConfig(2);
+                        -- iTransmit <= '1';
+                    end if;
+                when stClear =>
+                    if isClear = '1' then
+                        isConfig  <= '1';
+                        nextState <= stReady;
+                    else
+                        nextState <= stClear;
+                        iData     <= DispConfig(3);
+                        -- iTransmit <= '1';
+                    end if;
+                when stReady =>
+                    if iDisplayEnable = '1' then
+                        nextState <= stWrite;
+                    else
+                        nextState <= stReady;
+                    end if;
+                when stWrite =>
+                    -- if isTransmit = '1' then
+                    --     nextState <= stWordComplete;
+                    -- else
+                    --     nextState <= stWrite;
+                    --     iData     <= CharSeq(to_integer(unsigned(iCharSent)));
+                    -- end if;
+
+                    if isTransmit = '1' then
+                        nextState <= stWrite;
+                        iCharSent <= iCharSent + '1';
+                    elsif isAllTransmit = '1' then
+                        nextState <= stResetAddr;
+                        iCharSent <= (others => '0');
+                    else
+                        nextState <= stWrite;
+                        iData     <= CharSeq(to_integer(unsigned(iCharSent)));
+                    end if;
+
+                    -- if isTransmit = '1' then
+                    --     nextState <= stWrite;
+                    --     iData     <= CharSeq(to_integer(unsigned(iCharSent)));
+                    --     iCharSent <= iCharSent + '1';
+                    --     -- iTransmit <= '1';
+                    -- elsif isAllTransmit = '1' then
+                    --     nextState <= stResetAddr;
+                    --     iCharSent <= (others => '0');
+                    -- else
+                    --     nextState <= stWrite;
+                    --     iData     <= CharSeq(to_integer(unsigned(iCharSent)));
+                    --     iCharSent <= iCharSent + '1';
+                    --     -- iTransmit <= '1';
+                    -- end if;
+                    -- when stWordComplete =>
+                    --     if isAllTransmit = '1' then
+                    --         nextState <= stResetAddr;
+                    --         iCharSent <= (others => '0');
+                    --     else
+                    --         nextState <= stWrite;
+                    --         iCharSent <= iCharSent + '1';
+                    --     end if;
+                when stResetAddr =>
+                    if isResetAddr = '1' then
+                        nextState <= stComplete;
+                    else
+                        nextState <= stResetAddr;
+                        iData     <= ResetAddr;
+                        -- iTransmit <= '1';
+                    end if;
+                when stComplete =>
+                    iReset    <= '1';
                     nextState <= stReady;
-                else
-                    nextState <= stClear;
-                    iData     <= DispConfig(3);
-                    -- iTransmit <= '1';
-                end if;
-            when stReady =>
-                if iDisplayEnable = '1' then
-                    nextState <= stWrite;
-                else
-                    nextState <= stReady;
-                end if;
-            when stWrite =>
-                if isTransmit = '1' then
-                    nextState <= stWrite;
-                    iData     <= CharSeq(to_integer(unsigned(iCharSent)));
-                    iCharSent <= iCharSent + '1';
-                    -- iTransmit <= '1';
-                elsif isAllTransmit = '1' then
-                    nextState <= stResetAddr;
-                    iCharSent <= (others => '0');
-                else
-                    nextState <= stWrite;
-                    iData     <= CharSeq(to_integer(unsigned(iCharSent)));
-                    iCharSent <= iCharSent + '1';
-                    -- iTransmit <= '1';
-                end if;
-            when stResetAddr =>
-                if isResetAddr = '1' then
-                    nextState <= stComplete;
-                else
-                    nextState <= stResetAddr;
-                    iData     <= ResetAddr;
-                    -- iTransmit <= '1';
-                end if;
-            when stComplete =>
-                iReset    <= '1';
-                nextState <= stReady;
-        end case;
+            end case;
+        end if;
     end process;
 
     transmit : process (Clock)
@@ -387,7 +416,7 @@ begin
                             when stClear =>
                                 isClear <= '1';
                             when stWrite =>
-                                if iCharSent = "1101" then
+                                if iCharSent > "1101" then
                                     isAllTransmit <= '1';
                                 else
                                     isTransmit <= '1';

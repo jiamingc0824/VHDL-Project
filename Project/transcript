@@ -3,7 +3,7 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 20:17:52 on Mar 04,2020
+# Start time: 14:38:02 on Mar 11,2020
 # vcom -reportprogress 300 -explicit -93 SPI.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -12,17 +12,17 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SPI
 # -- Compiling architecture Behavioral of SPI
-# End time: 20:17:52 on Mar 04,2020, Elapsed time: 0:00:00
+# End time: 14:38:02 on Mar 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 20:17:52 on Mar 04,2020
+# Start time: 14:38:02 on Mar 11,2020
 # vcom -reportprogress 300 -explicit -93 tb_SPI.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tb_SPI
 # -- Compiling architecture behavior of tb_SPI
-# End time: 20:17:52 on Mar 04,2020, Elapsed time: 0:00:00
+# End time: 14:38:02 on Mar 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # //  ModelSim PE Student Edition 10.4a Apr  7 2015 
 # //
@@ -43,7 +43,7 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim -gui -do "do {tb_SPI.fdo}" 
-# Start time: 20:17:52 on Mar 04,2020
+# Start time: 14:38:02 on Mar 11,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -56,10 +56,6 @@
 # .main_pane.objects.interior.cs.body.tree
 restart
 run
-run
-run
-run
-run
-run
-# End time: 22:19:29 on Mar 04,2020, Elapsed time: 2:01:37
-# Errors: 0, Warnings: 0
+# wrong # args: should be "load file ?pkg? ?interp?"
+# End time: 14:46:01 on Mar 11,2020, Elapsed time: 0:07:59
+# Errors: 1, Warnings: 0

@@ -42,8 +42,8 @@ begin
             else
                 iClockDiv <= iClockDiv + '1';
                 if iClockDiv(24) = '1' then
-                    if iSCLKDiv = "1110" then
-                        iSCLKDiv <= "0001";
+                    if iSCLKDiv = "1101" then
+                        iSCLKDiv <= "0010";
                     else
                         iSCLKDiv <= iSCLKDiv + '1';
                     end if;
@@ -59,12 +59,12 @@ begin
         elsif iSCLK'event and iSCLK = '0' then
             presState      <= nextState;
             iNoBitReceived <= iNoBitReceived + '1';
-            iBuffer <= iBuffer(14 downto 0) & MISO;
+            iBuffer        <= iBuffer(14 downto 0) & MISO;
         end if;
         -- if iSCLK'EVENT and iSCLK = '1' then
-            -- if iNoBitReceived /= "0000" then
-            --     iBuffer <= iBuffer(14 downto 0) & MISO;
-            -- end if;
+        -- if iNoBitReceived /= "0000" then
+        --     iBuffer <= iBuffer(14 downto 0) & MISO;
+        -- end if;
         -- end if;
     end process;
 
@@ -82,7 +82,6 @@ begin
                 if iNoBitReceived = "10000" then
                     Convert   <= '1';
                     Data      <= iBuffer (14 downto 3);
-                    Testing   <= iBuffer;
                     nextState <= stStop;
                 else
                     nextState <= stTransmission;
@@ -93,8 +92,9 @@ begin
                 iReset    <= '1';
         end case;
     end process;
-    CS <= not iClockDiv(24);
-    iSCLK      <= iSCLKDiv(3);
-    SCLK       <= iSCLK;
+    CS      <= not iClockDiv(24);
+    iSCLK   <= iSCLKDiv(3);
+    SCLK    <= iSCLK;
+    Testing <= iBuffer;
 
 end Behavioral;

@@ -56,18 +56,18 @@ architecture Behavioral of RS232Txd is
     "00001101"  --/r
     );
 begin
-    CharSeq(5)(7 downto 0) <= "00100000" when BCD(23 downto 20) = "0000" else
-    "0011" & BCD(23 downto 20);
-    CharSeq(6)(7 downto 0) <= "00100000" when BCD(19 downto 16) = "0000" else
-    "0011" & BCD(19 downto 16);
-    CharSeq(7)(7 downto 0) <= "00100000" when BCD(15 downto 12) = "0000" else
-    "0011" & BCD(15 downto 12);
-    CharSeq(8)(7 downto 0) <= "00100000" when BCD(11 downto 8) = "0000" else
-    "0011" & BCD(11 downto 8);
-    CharSeq(10)(7 downto 0) <= "00100000" when BCD(7 downto 4) = "0000" else
-    "0011" & BCD(7 downto 4);
-    CharSeq(11)(7 downto 0) <= "00100000" when BCD(3 downto 0) = "0000" else
-    "0011" & BCD(3 downto 0);
+    CharSeq(5)(7 downto 0) <= "00100000" when iBCD(23 downto 20) = "0000" else
+    "0011" & iBCD(23 downto 20);
+    CharSeq(6)(7 downto 0) <= "00100000" when iBCD(19 downto 16) = "0000" else
+    "0011" & iBCD(19 downto 16);
+    CharSeq(7)(7 downto 0) <= "00100000" when iBCD(15 downto 12) = "0000" else
+    "0011" & iBCD(15 downto 12);
+    CharSeq(8)(7 downto 0) <= "00100000" when iBCD(11 downto 8) = "0000" else
+    "0011" & iBCD(11 downto 8);
+    CharSeq(10)(7 downto 0) <= "00100000" when iBCD(7 downto 4) = "0000" else
+    "0011" & iBCD(7 downto 4);
+    CharSeq(11)(7 downto 0) <= "00100000" when iBCD(3 downto 0) = "0000" else
+    "0011" & iBCD(3 downto 0);
 
 
     process (Clock)
