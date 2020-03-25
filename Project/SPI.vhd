@@ -7,6 +7,7 @@ entity SPI is
         Clock   : in STD_LOGIC;
         MISO    : in STD_LOGIC;
         Reset   : in STD_LOGIC;
+        Hold    : in STD_LOGIC;
         SCLK    : out STD_LOGIC;
         CS      : out STD_LOGIC;
         Convert : out STD_LOGIC;
@@ -23,9 +24,9 @@ architecture Behavioral of SPI is
     attribute enum_encoding of statetype : type is "00 01 11";
     signal presState                     : stateType;
     signal nextState                     : stateType;
-    signal iReset                        : STD_LOGIC;
-    signal iClockDiv                     : STD_LOGIC_VECTOR(24 downto 0) := (others => '0');
-    signal iSCLK                         : STD_LOGIC;
+    signal iReset                        : STD_LOGIC                     := '0';
+    signal iSCLK                         : STD_LOGIC                     := '0';
+    signal iClockDiv                     : STD_LOGIC_VECTOR(24 downto 0) := "0111111111111111111110000";
     signal iSCLKDiv                      : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
     signal iBuffer                       : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
     signal iNoBitReceived                : STD_LOGIC_VECTOR(4 downto 0)  := (others => '0');
@@ -33,12 +34,9 @@ begin
     process (Clock)
     begin
         if Clock'event and Clock = '1' then
-            if Reset = '1' or iReset = '1' then
-                iClockDiv <= (others => '0');
+            if Reset = '1' or iReset = '1' or Hold = '1' then
+                iClockDiv <= "0111111111111110000000000"; -- (others => '0') Actual Timing
                 iSCLKDiv  <= (others => '0');
-                -- iClockDiv(24)          <= '0';
-                -- iClockDiv(23 downto 5) <= (others => '1');
-                -- iClockDiv(4 downto 0)  <= (others => '0');
             else
                 iClockDiv <= iClockDiv + '1';
                 if iClockDiv(24) = '1' then
@@ -51,6 +49,7 @@ begin
             end if;
         end if;
     end process;
+
     process (iClockDiv(24), iSCLK)
     begin
         if iClockDiv(24) = '0' then
@@ -61,11 +60,6 @@ begin
             iNoBitReceived <= iNoBitReceived + '1';
             iBuffer        <= iBuffer(14 downto 0) & MISO;
         end if;
-        -- if iSCLK'EVENT and iSCLK = '1' then
-        -- if iNoBitReceived /= "0000" then
-        --     iBuffer <= iBuffer(14 downto 0) & MISO;
-        -- end if;
-        -- end if;
     end process;
 
     process (presState, iClockDiv(24), iNoBitReceived)

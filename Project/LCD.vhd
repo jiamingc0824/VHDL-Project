@@ -19,12 +19,13 @@ end LCD;
 
 architecture Behavioral of LCD is
     attribute enum_encoding : STRING;
-    --State Definitions
+    --LCD State
     type stateLCD is (stInit1, stInit2, stFunc, stEntry, stDisplay, stClear, stReady, stWrite, stResetAddr, stComplete);
     attribute enum_encoding of stateLCD : type is "0000 0001 0011 0010 0110 0111 0101 0100 1100 1101";
     signal presState                    : stateLCD;
     signal nextState                    : stateLCD;
 
+    --Transmission State
     type stateTransmit is (stIdle, stReady, stEnable, stWait, stComplete);
     attribute enum_encoding of stateTransmit : type is "000 001 011 010 110";
     signal transmitState                     : stateTransmit;
@@ -44,16 +45,15 @@ architecture Behavioral of LCD is
     signal isResetAddr   : STD_LOGIC := '0';
     signal isAllTransmit : STD_LOGIC := '0';
 
-    signal iCounter       : STD_LOGIC_VECTOR(20 downto 0) := (others => '0');
-    signal iCharSent      : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
-    signal iData          : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
     signal iReset         : STD_LOGIC                     := '0';
     signal iDisplay       : STD_LOGIC                     := '0';
     signal iDisplayEnable : STD_LOGIC                     := '0';
     signal iStage         : STD_LOGIC                     := '0';
     signal iTransmit      : STD_LOGIC                     := '0';
-
-    signal BCD : STD_LOGIC_VECTOR(23 downto 0) := x"123475";
+    signal iCounter       : STD_LOGIC_VECTOR(20 downto 0) := (others => '0');
+    signal iCharSent      : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
+    signal iData          : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
+    signal BCD            : STD_LOGIC_VECTOR(23 downto 0) := x"123475";
 
     constant ResetAddr : STD_LOGIC_VECTOR(7 downto 0) := x"02";
 
@@ -94,10 +94,10 @@ architecture Behavioral of LCD is
     "00100000"  --PlaceHolder
     );
 begin
-
+    --For Debug
     -- LED(3 downto 0) <= iCharSent;
     -- LED(7 downto 4) <= (others => '0');
-    with presState select LED(3 downto 0) <=
+    with presState select LED (3 downto 0) <=
         "0001" when stInit1,
         "0010" when stInit2,
         "0011" when stFunc,
@@ -111,28 +111,14 @@ begin
         "1011" when stComplete,
         "0000" when others;
 
-    LED(6 downto 4) <= "001" when transmitState = stIdle else
+    LED (6 downto 4) <= "001" when transmitState = stIdle else
     "010" when transmitState = stReady else
     "011" when transmitState = stEnable else
     "100" when transmitState = stWait else
     "101" when transmitState = stComplete else
     "000";
     LED(7) <= isAllTransmit;
-
-    RW <= '0';
-
-    CharSeq(5)(7 downto 0) <= "00100000" when BCD(23 downto 20) = "0000" else
-    "0011" & BCD(23 downto 20);
-    CharSeq(6)(7 downto 0) <= "00100000" when BCD(19 downto 16) = "0000" else
-    "0011" & BCD(19 downto 16);
-    CharSeq(7)(7 downto 0) <= "00100000" when BCD(15 downto 12) = "0000" else
-    "0011" & BCD(15 downto 12);
-    CharSeq(8)(7 downto 0) <= "00100000" when BCD(11 downto 8) = "0000" else
-    "0011" & BCD(11 downto 8);
-    CharSeq(10)(7 downto 0) <= "00100000" when BCD(7 downto 4) = "0000" else
-    "0011" & BCD(7 downto 4);
-    CharSeq(11)(7 downto 0) <= "00100000" when BCD(3 downto 0) = "0000" else
-    "0011" & BCD(3 downto 0);
+    --Debug End
 
     process (Clock)
     begin
@@ -429,4 +415,18 @@ begin
             end if;
         end if;
     end process;
+
+    CharSeq(5)(7 downto 0) <= "00100000" when BCD(23 downto 20) = "0000" else
+    "0011" & BCD(23 downto 20);
+    CharSeq(6)(7 downto 0) <= "00100000" when BCD(19 downto 16) = "0000" else
+    "0011" & BCD(19 downto 16);
+    CharSeq(7)(7 downto 0) <= "00100000" when BCD(15 downto 12) = "0000" else
+    "0011" & BCD(15 downto 12);
+    CharSeq(8)(7 downto 0) <= "00100000" when BCD(11 downto 8) = "0000" else
+    "0011" & BCD(11 downto 8);
+    CharSeq(10)(7 downto 0) <= "00100000" when BCD(7 downto 4) = "0000" else
+    "0011" & BCD(7 downto 4);
+    CharSeq(11)(7 downto 0) <= "00100000" when BCD(3 downto 0) = "0000" else
+    "0011" & BCD(3 downto 0);
+    RW <= '0';
 end Behavioral;

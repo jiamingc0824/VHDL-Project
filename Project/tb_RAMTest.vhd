@@ -11,17 +11,17 @@ architecture behavior of tb_RAMTest is
    component RAMTest
       port (
          Clock   : in STD_LOGIC;
-         AddrA   : in STD_LOGIC_VECTOR(0 downto 0);
-         AddrB   : in STD_LOGIC_VECTOR(0 downto 0);
+         R       : in STD_LOGIC;
+         Trig    : in STD_LOGIC;
          DataIn  : in STD_LOGIC_VECTOR(23 downto 0);
          DataOut : out STD_LOGIC_VECTOR(23 downto 0)
       );
    end component;
    --Inputs
    signal tb_Clock  : std_logic                     := '0';
-   signal tb_AddrA  : std_logic_vector(0 downto 0)  := (others => '0');
    signal tb_DataIn : std_logic_vector(23 downto 0) := (others => '0');
-   signal tb_AddrB  : std_logic_vector(0 downto 0)  := (others => '0');
+   signal tb_R      : std_logic                     := '0';
+   signal tb_Trig   : std_logic                     := '0';
 
    --Outputs
    signal tb_DataOut : std_logic_vector(23 downto 0);
@@ -34,9 +34,9 @@ begin
    -- Instantiate the Unit Under Test (UUT)
    uut : RAMTest port map(
       Clock   => tb_Clock,
-      AddrA   => tb_AddrA,
       DataIn  => tb_DataIn,
-      AddrB   => tb_AddrB,
+      R       => tb_R,
+      Trig    => tb_Trig,
       DataOut => tb_DataOut
    );
 
@@ -51,22 +51,24 @@ begin
    -- Stimulus process
    stim_proc : process
    begin
-      -- hold reset state for 100 ns.
-      wait for 100 ns;
-      tb_AddrA  <= "0";
-      tb_DataIn <= "100101101100001110100101";
-      wait for Clock_period;
-      tb_AddrB <= "0";
-      wait for Clock_period;
-      tb_AddrA  <= "1";
-      tb_DataIn <= tb_DataOut;
-      wait for Clock_period;
-      tb_AddrA  <= "0";
-      tb_DataIn <= "011010010011110010100101";
-      wait for Clock_period;
-      tb_AddrB <= "1";
-      wait for 10*Clock_period;
-      tb_AddrB <= "0";
+      tb_R      <= '0';
+      tb_DataIn <= "000000000000111111111111";
+      tb_Trig   <= '1';
+      wait for 2 * Clock_period;
+      tb_Trig <= '0';
+      wait for 16 * Clock_period;
+      tb_R      <= '1';
+      tb_DataIn <= "111111111111000000000000";
+      wait for 2 * Clock_period;
+      tb_R <= '0';
+      wait for 2 * Clock_period;
+      tb_Trig <= '1';
+      wait for 2 * Clock_period;
+      tb_Trig <= '0';
+      wait for 16 * Clock_period;
+      tb_R <= '1';
+      wait for 2 * Clock_period;
+      tb_R <= '0';
       wait;
    end process;
 

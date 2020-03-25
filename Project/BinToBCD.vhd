@@ -72,6 +72,7 @@ end BinToBCD;
 --             when stIdle =>
 --                 if Convert = '1' then
 --                     nextState <= stShift;
+--                     Done <= '0';
 --                     iBuffer   <= '1';
 --                 else
 --                     nextState <= stIdle;
@@ -88,6 +89,7 @@ end BinToBCD;
 --                 end if;
 --             when stComplete =>
 --                 nextState <= stIdle;
+--                 Done             <= '1';
 --                 BCD(23 downto 8) <= iShiftReg2;
 --                 if Binary(1 downto 0) = "01" then
 --                     BCD(7 downto 0) <= "00100101";
@@ -109,12 +111,13 @@ architecture Behavioral of BinToBCD is
     attribute enum_encoding of stateType : type is "00 01 11";
     signal presState                     : stateType;
     signal nextState                     : stateType;
-    signal iReset                        : STD_LOGIC;
-    signal iBuffer                       : STD_LOGIC;
-    signal iShift                        : STD_LOGIC;
-    signal iNoBitsProcessed              : STD_LOGIC_VECTOR(3 downto 0);
-    signal iShiftReg1                    : STD_LOGIC_VECTOR(9 downto 0);
+    signal iReset                        : STD_LOGIC                     := '0';
+    signal iBuffer                       : STD_LOGIC                     := '0';
+    signal iShift                        : STD_LOGIC                     := '0';
+    signal iNoBitsProcessed              : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
+    signal iShiftReg1                    : STD_LOGIC_VECTOR(9 downto 0)  := (others => '0');
     signal iShiftReg2                    : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
+
 begin
     process (Clock)
         variable TempReg : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
@@ -162,7 +165,7 @@ begin
             when stIdle =>
                 if Convert = '1' then
                     nextState <= stConversion;
-                    Done <= '0';
+                    Done      <= '0';
                     iBuffer   <= '1';
                 else
                     nextState <= stIdle;

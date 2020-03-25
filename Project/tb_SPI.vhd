@@ -13,6 +13,7 @@ architecture behavior of tb_SPI is
          Clock   : in std_logic;
          MISO    : in std_logic;
          Reset   : in std_logic;
+         Hold    : in std_logic;
          SCLK    : out std_logic;
          CS      : out std_logic;
          Convert : out STD_LOGIC;
@@ -23,6 +24,7 @@ architecture behavior of tb_SPI is
    signal tb_Clock : std_logic := '0';
    signal tb_MISO  : std_logic := '0';
    signal tb_Reset : std_logic := '0';
+   signal tb_Hold  : std_logic := '0';
 
    --Outputs
    signal tb_SCLK    : std_logic;
@@ -42,6 +44,7 @@ begin
       Clock   => tb_Clock,
       MISO    => tb_MISO,
       Reset   => tb_Reset,
+      Hold    => tb_Hold,
       SCLK    => tb_SCLK,
       CS      => tb_CS,
       Convert => tb_Convert,
@@ -57,13 +60,17 @@ begin
       wait for Clock_period/2;
    end process;
 
-   process (tb_SCLK)
+   process (tb_SCLK, tb_CS)
    begin
       tb_MISO <= Test(15);
       if tb_SCLK'EVENT and tb_SCLK = '0' then
          if tb_CS = '0' then
             Test <= Test(14 downto 0) & '0';
          end if;
+      end if;
+
+      if tb_CS'EVENT and tb_CS = '1' then
+         Test <= "1001110000111111";
       end if;
    end process;
 

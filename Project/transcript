@@ -1,9 +1,22 @@
 # Reading E:/Program Files (x86)/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
-# do {tb_SPI.fdo}
+# do {tb_TopLevelTest.fdo}
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 14:38:02 on Mar 11,2020
+# Start time: 15:14:25 on Mar 25,2020
+# vcom -reportprogress 300 -explicit -93 ipcore_dir/DPRAM24x2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DPRAM24x2
+# -- Compiling architecture DPRAM24x2_a of DPRAM24x2
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity BLK_MEM_GEN_V7_3
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 15:14:25 on Mar 25,2020
 # vcom -reportprogress 300 -explicit -93 SPI.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -12,18 +25,69 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SPI
 # -- Compiling architecture Behavioral of SPI
-# End time: 14:38:02 on Mar 11,2020, Elapsed time: 0:00:00
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 14:38:02 on Mar 11,2020
-# vcom -reportprogress 300 -explicit -93 tb_SPI.vhd 
+# Start time: 15:14:25 on Mar 25,2020
+# vcom -reportprogress 300 -explicit -93 RS232Txd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_SPI
-# -- Compiling architecture behavior of tb_SPI
-# End time: 14:38:02 on Mar 11,2020, Elapsed time: 0:00:00
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RS232Txd
+# -- Compiling architecture Behavioral of RS232Txd
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 15:14:25 on Mar 25,2020
+# vcom -reportprogress 300 -explicit -93 DPRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity DPRAM
+# -- Compiling architecture Behavioral of DPRAM
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 15:14:25 on Mar 25,2020
+# vcom -reportprogress 300 -explicit -93 BinToBCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity BinToBCD
+# -- Compiling architecture Behavioral of BinToBCD
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 15:14:25 on Mar 25,2020
+# vcom -reportprogress 300 -explicit -93 TopLevelTest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity TopLevelTest
+# -- Compiling architecture Behavioral of TopLevelTest
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 15:14:25 on Mar 25,2020
+# vcom -reportprogress 300 -explicit -93 tb_TopLevelTest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_TopLevelTest
+# -- Compiling architecture behavior of tb_TopLevelTest
+# ** Warning: tb_TopLevelTest.vhd(80): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: tb_TopLevelTest.vhd(84): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:14:25 on Mar 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # //  ModelSim PE Student Edition 10.4a Apr  7 2015 
 # //
 # //  Copyright 1991-2015 Mentor Graphics Corporation
@@ -42,20 +106,1674 @@
 # // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
-# vsim -gui -do "do {tb_SPI.fdo}" 
-# Start time: 14:38:02 on Mar 11,2020
+# vsim -gui -do "do {tb_TopLevelTest.fdo}" 
+# Start time: 15:14:26 on Mar 25,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.tb_spi(behavior)
+# Loading work.tb_topleveltest(behavior)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
+# Loading work.topleveltest(behavioral)
 # Loading work.spi(behavioral)
+# Loading work.bintobcd(behavioral)
+# Loading work.dpram(behavioral)
+# Loading work.dpram24x2(dpram24x2_a)
+# Loading xilinxcorelib.blk_mem_gen_v7_3(behavioral)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.blk_mem_gen_v7_3_mem_module(mem_module_behavioral)
+# Loading xilinxcorelib.blk_mem_gen_v7_3_output_stage(output_stage_behavioral)
+# Loading xilinxcorelib.blk_mem_gen_v7_3_softecc_output_reg_stage(softecc_output_reg_stage_behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.rs232txd(behavioral)
+# ** Warning: Design size of 15844 statements or 12 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Jia Ming  Hostname: DESKTOP-DFGCNJ0  ProcessID: 13208
+# 
+#           Attempting to use alternate WLF file "./wlftjbmjqx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftjbmjqx
+# 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior.
+#    Time: 10 ns  Iteration: 1  Instance: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 10 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 30 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 50 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 70 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 90 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
 restart
 run
-# wrong # args: should be "load file ?pkg? ?interp?"
-# End time: 14:46:01 on Mar 11,2020, Elapsed time: 0:07:59
-# Errors: 1, Warnings: 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_topleveltest/uut/RTxd
+# ** Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior.
+#    Time: 10 ns  Iteration: 1  Instance: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 10 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 30 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 50 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 70 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 90 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 1990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 2990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 3990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 4490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 29090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 29110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 40990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 41990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 42590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 67210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: 0
+# 
+#    Time: 67230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 80990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81650 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81670 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81690 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81710 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81730 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81750 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81770 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81790 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81810 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81830 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81850 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81870 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81890 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81910 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81930 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81950 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81970 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 81990 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82010 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82030 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82050 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82070 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82090 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82110 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82130 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82150 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82170 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82190 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82210 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82230 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82250 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82270 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82290 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82310 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82330 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82350 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82370 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82390 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82410 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82430 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82450 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82470 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82490 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82510 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82530 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82550 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82570 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82590 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82610 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# ** Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+# 
+#    Time: 82630 ns  Iteration: 1  Region: /tb_topleveltest/uut/MEM/U1/U0/native_mem_module/mem_module/sync_coll
+# End time: 15:20:51 on Mar 25,2020, Elapsed time: 0:06:25
+# Errors: 0, Warnings: 550
