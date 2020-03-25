@@ -1,0 +1,88 @@
+ISim log file
+Running: C:\Users\Jia Ming\Desktop\HDL Project\Project\tb_RAMTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Jia Ming/Desktop/HDL Project/Project/tb_RAMTest_isim_beh.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/tb_ramtest/uut/U1/U0/native_mem_module/mem_module/).
+at 10 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 10 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 10 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: U
+
+at 30 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 30 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 50 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 50 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 50 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: U
+
+at 70 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 70 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 90 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 90 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 90 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: U
+
+at 110 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 110 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 130 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 130 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 130 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 0, B read address: U
+
+at 150 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 150 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 170 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 190 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 210 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 230 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 250 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 270 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 290 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 310 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 330 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 350 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 390 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 430 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 470 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 510 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 550 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 590 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 630 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 670 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 710 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 750 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 790 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 830 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 870 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 910 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 950 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+
+at 990 ns(1), Instance /tb_ramtest/uut/U1/U0/native_mem_module/mem_module/ : Warning: blk_mem_gen_v7_3 WARNING: collision detected: A write address: 1, B read address: 1
+

@@ -69,7 +69,7 @@ begin
          end if;
       end if;
 
-      if tb_CS'EVENT and tb_CS = '1' then
+      if tb_CS'EVENT and tb_CS = '1' and Test /= "1100001111110000" then
          Test <= "1001110000111111";
       end if;
    end process;
