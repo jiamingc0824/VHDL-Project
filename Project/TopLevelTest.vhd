@@ -115,7 +115,7 @@ begin
             iPrevious <= Previous;
             if Previous = '1' and iPrevious = '0' and iHold = '0' then
                 iHold <= '1';
-            elsif iHoldCounter = "000000000000000000000001111111" then --111111111111111111111111111111 Actual timing
+            elsif iHoldCounter = "111111111111111111111111111111" then --"111111111111111111111111111111" -> Actual timing "000000000000000000000001111111" -> Demo Timing
                 iHold        <= '0';
                 iHoldCounter <= (others => '0');
             elsif iHold = '1' then
