@@ -52,45 +52,44 @@ architecture Behavioral of LCD is
     signal iCounter       : STD_LOGIC_VECTOR(20 downto 0) := (others => '0');
     signal iCharSent      : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
     signal iData          : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
-    -- signal BCD            : STD_LOGIC_VECTOR(23 downto 0) := x"123475";
+    signal iBCD           : STD_LOGIC_VECTOR(23 downto 0) := x"123475"; --For Debug Purpose
 
     constant ResetAddr : STD_LOGIC_VECTOR(7 downto 0) := x"02";
 
     --Initialization Sequence
     type InitMemory is array (0 to 1) of STD_LOGIC_VECTOR(7 downto 0);
     constant InitSeq : InitMemory := (
-    "00110011", --Init Stage 1
-    "00110010"  --Init Stage 2
+    x"33", --Init Stage 1
+    x"32"  --Init Stage 2
     );
 
     --Display Config Sequence
     type ConfigMemory is array (0 to 3) of STD_LOGIC_VECTOR(7 downto 0);
     constant DispConfig : ConfigMemory := (
-    "00101000", --Function Set
-    "00000110", --Entry Mode
-    "00001100", --Display and Cursor Setting
-    "00000001"  --Clear Display
+    x"28", --Function Set
+    x"06", --Entry Mode
+    x"0C", --Display and Cursor Setting
+    x"01"  --Clear Display
     );
 
     --Display Character Sequence
     type CharMemory is array (0 to 15) of STD_LOGIC_VECTOR(7 downto 0);
     signal CharSeq : CharMemory := (
-    "01010100", --T
-    "01100101", --e
-    "01101101", --m
-    "01110000", --p
-    "00111010", --:
-    "00110000", --Digit 1
-    "00110000", --Digit 2
-    "00110000", --Digit 3
-    "00110000", --Digit 4
-    "00101110", --.
-    "00110000", --Digit 5
-    "00110000", --Digit 6
-    "11011111", --degree
-    "01000011", --C
-    "00100000", --PlaceHolder
-    "00100000"  --PlaceHolder
+    "01010100",          --T
+    "01100101",          --e
+    "01101101",          --m
+    "01110000",          --p
+    "00111010",          --:
+    "00110000",          --Digit 1
+    "00110000",          --Digit 2
+    "00110000",          --Digit 3
+    "00110000",          --Digit 4
+    "00101110",          --.
+    "00110000",          --Digit 5
+    "00110000",          --Digit 6
+    "11011111",          --degree
+    "01000011",          --C
+    others => "00100000" --PlaceHolder
     );
 begin
     --For Debug
@@ -367,17 +366,14 @@ begin
         end if;
     end process;
 
-    CharSeq(5)(7 downto 0) <= "00100000" when BCD(23 downto 20) = "0000" else
-    "0011" & BCD(23 downto 20);
-    CharSeq(6)(7 downto 0) <= "00100000" when BCD(19 downto 16) = "0000" else
-    "0011" & BCD(19 downto 16);
-    CharSeq(7)(7 downto 0) <= "00100000" when BCD(15 downto 12) = "0000" else
-    "0011" & BCD(15 downto 12);
-    CharSeq(8)(7 downto 0) <= "00100000" when BCD(11 downto 8) = "0000" else
-    "0011" & BCD(11 downto 8);
-    CharSeq(10)(7 downto 0) <= "00100000" when BCD(7 downto 4) = "0000" else
-    "0011" & BCD(7 downto 4);
-    CharSeq(11)(7 downto 0) <= "00100000" when BCD(3 downto 0) = "0000" else
-    "0011" & BCD(3 downto 0);
-    RW <= '0';
+    CharSeq(5)(7 downto 0) <= x"20" when BCD(23 downto 20) = x"0" else
+    x"2" & BCD(23 downto 20);
+    CharSeq(6)(7 downto 0) <= x"20" when BCD(23 downto 16) = x"00" else
+    x"2" & BCD(19 downto 16);
+    CharSeq(7)(7 downto 0) <= x"20" when BCD(23 downto 12) = x"000" else
+    x"2" & BCD(15 downto 12);
+    CharSeq(8)(7 downto 0)  <= x"2" & BCD(11 downto 8);
+    CharSeq(10)(7 downto 0) <= x"2" & BCD(7 downto 4);
+    CharSeq(11)(7 downto 0) <= x"2" & BCD(3 downto 0);
+    RW                      <= '0';
 end Behavioral;
