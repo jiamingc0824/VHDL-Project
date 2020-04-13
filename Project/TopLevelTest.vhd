@@ -11,7 +11,19 @@ entity TopLevelTest is
         ThreePointThreeVolt : out STD_LOGIC;
         Txd                 : out STD_LOGIC;
         SCLK                : out STD_LOGIC;
-        CS                  : out STD_LOGIC
+        CS                  : out STD_LOGIC;
+        Ca                  : out STD_LOGIC;
+        Cb                  : out STD_LOGIC;
+        Cc                  : out STD_LOGIC;
+        Cd                  : out STD_LOGIC;
+        Ce                  : out STD_LOGIC;
+        Cf                  : out STD_LOGIC;
+        Cg                  : out STD_LOGIC;
+        LCD_En              : out STD_LOGIC;
+        LCD_RS              : out STD_LOGIC;
+        LCD_RW              : out STD_LOGIC;
+        LCD_Data            : out STD_LOGIC_VECTOR(3 downto 0);
+        An                  : out STD_LOGIC_VECTOR (5 downto 0)
     );
 end TopLevelTest;
 
@@ -51,6 +63,19 @@ architecture Behavioral of TopLevelTest is
         );
     end component;
 
+    component LCD is
+        port (
+            Clock   : in STD_LOGIC;
+            Reset   : in STD_LOGIC;
+            Display : in STD_LOGIC;
+            BCD     : in STD_LOGIC_VECTOR(23 downto 0);
+            Data    : out STD_LOGIC_VECTOR(3 downto 0);
+            Enable  : out STD_LOGIC;
+            RS      : out STD_LOGIC;
+            RW      : out STD_LOGIC
+        );
+    end component;
+
     component RS232Txd is
         port (
             Reset : in STD_LOGIC;
@@ -58,6 +83,21 @@ architecture Behavioral of TopLevelTest is
             Clock : in STD_LOGIC;
             BCD   : in STD_LOGIC_VECTOR(23 downto 0);
             Txd   : out STD_LOGIC
+        );
+    end component;
+
+    component SevenSegDecoder
+        port (
+            BCD   : in STD_LOGIC_VECTOR(23 downto 0);
+            Clock : in STD_LOGIC;
+            An    : out STD_LOGIC_VECTOR (5 downto 0);
+            Ca    : out STD_LOGIC;
+            Cb    : out STD_LOGIC;
+            Cc    : out STD_LOGIC;
+            Cd    : out STD_LOGIC;
+            Ce    : out STD_LOGIC;
+            Cf    : out STD_LOGIC;
+            Cg    : out STD_LOGIC
         );
     end component;
 
@@ -101,12 +141,36 @@ begin
         DataOut => iDataOut
     );
 
+    Display : LCD port map(
+        Clock   => SystemClock,
+        Reset   => Reset,
+        Display => iDisplay,
+        BCD     => iDataOut,
+        Data    => LCD_Data,
+        Enable  => LCD_En,
+        RS      => LCD_RS,
+        RW      => LCD_RW
+    );
+
     RTxd : Rs232Txd port map(
         Reset => Reset,
         Send  => iDisplay,
         Clock => SystemClock,
         BCD   => iDataOut,
         Txd   => Txd
+    );
+
+    SSD : SevenSegDecoder port map(
+        BCD   => iDataOut,
+        Clock => SystemClock,
+        An    => An,
+        Ca    => Ca,
+        Cb    => Cb,
+        Cc    => Cc,
+        Cd    => Cd,
+        Ce    => Ce,
+        Cf    => Cf,
+        Cg    => Cg
     );
 
     process (SystemClock)
