@@ -14,6 +14,7 @@ architecture behavior of tb_BinToBCD is
          Reset   : in STD_LOGIC;
          Convert : in STD_LOGIC;
          Binary  : in STD_LOGIC_VECTOR(11 downto 0);
+         Done    : out STD_LOGIC;
          BCD     : out STD_LOGIC_VECTOR(23 downto 0)
       );
    end component;
@@ -24,7 +25,8 @@ architecture behavior of tb_BinToBCD is
    signal tb_Binary  : std_logic_vector(11 downto 0) := (others => '0');
 
    --Outputs
-   signal tb_BCD : std_logic_vector(23 downto 0);
+   signal tb_Done : std_logic;
+   signal tb_BCD  : std_logic_vector(23 downto 0);
 
    -- Clock period definitions
    constant Clock_period : TIME := 20 ns;
@@ -37,6 +39,7 @@ begin
       Reset   => tb_Reset,
       Convert => tb_Convert,
       Binary  => tb_Binary,
+      Done    => tb_Done,
       BCD     => tb_BCD
    );
 
@@ -57,12 +60,12 @@ begin
       wait for Clock_period * 10;
       tb_Reset <= '0';
       -- insert stimulus here 
-      tb_Binary <= "111111111111"; -- 1023.75
+      tb_Binary  <= "111111111111"; -- 1023.75
       tb_Convert <= '1';
       wait for Clock_period * 4;
       tb_Convert <= '0';
       wait for Clock_period * 20;
-      tb_Binary <= "110111100011"; -- 888.75
+      tb_Binary  <= "110111100011"; -- 888.75
       tb_Convert <= '1';
       wait for Clock_period * 4;
       tb_Convert <= '0';

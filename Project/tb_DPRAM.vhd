@@ -29,7 +29,7 @@ architecture behavior of tb_DPRAM is
    signal tb_DataOut : std_logic_vector(23 downto 0);
 
    -- Clock period definitions
-   constant Clock_period : TIME := 10 ns;
+   constant Clock_period : TIME := 20 ns;
 
 begin
 
@@ -56,20 +56,20 @@ begin
    stim_proc : process
    begin
       tb_R      <= '0';
-      tb_DataIn <= "000000000000111111111111";
+      tb_DataIn <= x"000FFF";
       tb_W   <= '1';
       wait for 2 * Clock_period;
       tb_W <= '0';
-      wait for 16 * Clock_period;
+      wait for 5 * Clock_period;
       tb_R      <= '1';
-      tb_DataIn <= "111111111111000000000000";
+      tb_DataIn <= x"FFF000";
       wait for 2 * Clock_period;
       tb_R <= '0';
       wait for 2 * Clock_period;
       tb_W <= '1';
       wait for 2 * Clock_period;
       tb_W <= '0';
-      wait for 16 * Clock_period;
+      wait for 5 * Clock_period;
       tb_R <= '1';
       wait for 2 * Clock_period;
       tb_R <= '0';

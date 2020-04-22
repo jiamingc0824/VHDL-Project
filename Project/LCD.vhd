@@ -233,13 +233,13 @@ begin
                 case transmitState is
                     when stIdle =>
                         case presState is
-                            when stInit1 | stInit2 | stFunc | stEntry | stDisplay | stClear | stWrite | stResetAddr =>
+                            when stReady | stComplete =>
+                                transmitState <= stIdle;
+                            when others =>
                                 isTransmit    <= '0';
                                 isAllTransmit <= '0';
                                 isResetAddr   <= '0';
                                 transmitState <= stReady;
-                            when others =>
-                                transmitState <= stIdle;
                         end case;
                     when stReady =>
                         Enable <= '0';
@@ -251,10 +251,10 @@ begin
                         case presState is
                             when stInit1 =>
                                 RS <= '0';
-                                if iStage = '0' and iCounter = "10110111000110110000" then --750000 Cycle 10110111000110110000
+                                if iStage = '0' and iCounter = "00000000000000000100" then --750000 Cycle 10110111000110110000
                                     iCounter      <= (others => '0');
                                     transmitState <= stEnable;
-                                elsif iStage = '1' and iCounter = "00110010000011001000" then --205000 Cycle 00110010000011001000
+                                elsif iStage = '1' and iCounter = "00000000000000000100" then --205000 Cycle 00110010000011001000
                                     iCounter      <= (others => '0');
                                     transmitState <= stEnable;
                                 else
@@ -367,13 +367,13 @@ begin
     end process;
 
     CharSeq(5)(7 downto 0) <= x"20" when BCD(23 downto 20) = x"0" else
-    x"2" & BCD(23 downto 20);
+    x"3" & BCD(23 downto 20);
     CharSeq(6)(7 downto 0) <= x"20" when BCD(23 downto 16) = x"00" else
-    x"2" & BCD(19 downto 16);
+    x"3" & BCD(19 downto 16);
     CharSeq(7)(7 downto 0) <= x"20" when BCD(23 downto 12) = x"000" else
-    x"2" & BCD(15 downto 12);
-    CharSeq(8)(7 downto 0)  <= x"2" & BCD(11 downto 8);
-    CharSeq(10)(7 downto 0) <= x"2" & BCD(7 downto 4);
-    CharSeq(11)(7 downto 0) <= x"2" & BCD(3 downto 0);
+    x"3" & BCD(15 downto 12);
+    CharSeq(8)(7 downto 0)  <= x"3" & BCD(11 downto 8);
+    CharSeq(10)(7 downto 0) <= x"3" & BCD(7 downto 4);
+    CharSeq(11)(7 downto 0) <= x"3" & BCD(3 downto 0);
     RW                      <= '0';
 end Behavioral;

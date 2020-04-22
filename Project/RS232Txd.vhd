@@ -59,7 +59,7 @@ begin
         if Clock'event and Clock = '1' then
             if Reset = '1' or iReset = '1' then
                 iRSClockEnable <= '0';
-                iRSClkDiv      <= "0010111011000"; --0010111011000 Actual Timing
+                iRSClkDiv      <= "0010111010100"; --0010111010100 Actual Timing
             else
                 iSend <= Send;
             end if;
@@ -67,15 +67,15 @@ begin
                 iRSClockEnable <= '1';
             end if;
             if iRSClockEnable = '1' then
-                if iRSClkDiv = "1101000100111" then --1101000100111 Actual timing
-                    iRSClkDiv <= "0010111011000";       --0010111011000 Actual timing
+                if iRSClkDiv = "1101000101011" then --1101000101011 Actual timing
+                    iRSClkDiv <= "0010111010100";       --0010111010100 Actual timing
                 else
                     iRSClkDiv <= iRSClkDiv + '1';
                 end if;
             end if;
         end if;
     end process;
-    iRSClock <= iRSClkDiv(1);
+    iRSClock <= iRSClkDiv(12);
 
     process (iRSClockEnable, iRSClock)
     begin
@@ -141,13 +141,13 @@ begin
     end process;
 
     CharSeq(5)(7 downto 0) <= x"20" when BCD(23 downto 20) = x"0" else
-    x"2" & BCD(23 downto 20);
+    x"3" & BCD(23 downto 20);
     CharSeq(6)(7 downto 0) <= x"20" when BCD(23 downto 16) = x"00" else
-    x"2" & BCD(19 downto 16);
+    x"3" & BCD(19 downto 16);
     CharSeq(7)(7 downto 0) <= x"20" when BCD(23 downto 12) = x"000" else
-    x"2" & BCD(15 downto 12);
-    CharSeq(8)(7 downto 0)  <= x"2" & BCD(11 downto 8);
-    CharSeq(10)(7 downto 0) <= x"2" & BCD(7 downto 4);
-    CharSeq(11)(7 downto 0) <= x"2" & BCD(3 downto 0);
+    x"3" & BCD(15 downto 12);
+    CharSeq(8)(7 downto 0)  <= x"3" & BCD(11 downto 8);
+    CharSeq(10)(7 downto 0) <= x"3" & BCD(7 downto 4);
+    CharSeq(11)(7 downto 0) <= x"3" & BCD(3 downto 0);
 
 end Behavioral;

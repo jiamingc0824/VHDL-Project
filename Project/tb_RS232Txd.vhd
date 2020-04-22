@@ -55,8 +55,9 @@ begin
       tb_Reset <= '1';
       wait for 100 ns;
       tb_Reset <= '0';
+      tb_BCD <= x"002375";
       tb_Send  <= '1';
-      wait for 10 us;
+      wait for 40 ns;
       tb_Send <= '0';
 
       -- insert stimulus here 

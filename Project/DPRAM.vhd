@@ -85,13 +85,13 @@ begin
                     nextState <= stCurrMem;
                     iAddrA(0) <= '0';
                     iDataIn   <= DataIn;
+                    iTemp     <= iDataOut;
                 else
                     nextState <= stIdle;
                 end if;
             when stCurrMem =>
                 nextState <= stPrevMem;
                 iAddrA(0) <= '0';
-                iTemp     <= iDataOut;
             when stPrevMem =>
                 nextState <= stDisplay;
                 iAddrA(0) <= '1';

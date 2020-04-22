@@ -33,7 +33,7 @@ architecture behavior of tb_LCD is
    signal tb_RW     : std_logic;
 
    -- Clock period definitions
-   constant Clock_period : TIME := 10 ns;
+   constant Clock_period : TIME := 20 ns;
 
 begin
 
