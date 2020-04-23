@@ -33,6 +33,7 @@ architecture Behavioral of TopLevel is
             Clock   : in STD_LOGIC;
             MISO    : in STD_LOGIC;
             Reset   : in STD_LOGIC;
+            Hold    : in STD_LOGIC;
             SCLK    : out STD_LOGIC;
             CS      : out STD_LOGIC;
             Convert : out STD_LOGIC;
@@ -51,15 +52,14 @@ architecture Behavioral of TopLevel is
         );
     end component;
 
-    component DPRAM24x2
+    component DPRAM is
         port (
-            clka  : in STD_LOGIC;
-            wea   : in STD_LOGIC_VECTOR(0 downto 0);
-            addra : in STD_LOGIC_VECTOR(0 downto 0);
-            dina  : in STD_LOGIC_VECTOR(23 downto 0);
-            clkb  : in STD_LOGIC;
-            addrb : in STD_LOGIC_VECTOR(0 downto 0);
-            doutb : out STD_LOGIC_VECTOR(23 downto 0)
+            Clock   : in STD_LOGIC;
+            R       : in STD_LOGIC;
+            W       : in STD_LOGIC;
+            DataIn  : in STD_LOGIC_VECTOR(23 downto 0);
+            Display : out STD_LOGIC;
+            DataOut : out STD_LOGIC_VECTOR(23 downto 0)
         );
     end component;
 
@@ -68,11 +68,11 @@ architecture Behavioral of TopLevel is
             Clock   : in STD_LOGIC;
             Reset   : in STD_LOGIC;
             Display : in STD_LOGIC;
-            -- BCD     : in STD_LOGIC_VECTOR(23 downto 0);
-            Data   : out STD_LOGIC_VECTOR(3 downto 0);
-            Enable : out STD_LOGIC;
-            RS     : out STD_LOGIC;
-            RW     : out STD_LOGIC
+            BCD     : in STD_LOGIC_VECTOR(23 downto 0);
+            Data    : out STD_LOGIC_VECTOR(3 downto 0);
+            Enable  : out STD_LOGIC;
+            RS      : out STD_LOGIC;
+            RW      : out STD_LOGIC
         );
     end component;
 
@@ -82,7 +82,8 @@ architecture Behavioral of TopLevel is
             Send  : in STD_LOGIC;
             Clock : in STD_LOGIC;
             BCD   : in STD_LOGIC_VECTOR(23 downto 0);
-            Txd   : out STD_LOGIC);
+            Txd   : out STD_LOGIC
+        );
     end component;
 
     component SevenSegDecoder
@@ -100,72 +101,67 @@ architecture Behavioral of TopLevel is
         );
     end component;
 
-    signal BinaryTemp                                                             : STD_LOGIC_VECTOR (11 downto 0);
-    signal BCDTemp                                                                : STD_LOGIC_VECTOR (23 downto 0);
-    signal iWE                                                                    : STD_LOGIC_VECTOR(0 downto 0);
-
-    --Fix this
-    signal iDone    : STD_LOGIC;
-    signal iConvert : STD_LOGIC;
-    signal iAddrA   : STD_LOGIC_VECTOR(0 downto 0);
-    signal iAddrB   : STD_LOGIC_VECTOR(0 downto 0);
-    signal iDataIn  : STD_LOGIC_VECTOR(23 downto 0);
-    signal iDataOut : STD_LOGIC_VECTOR(23 downto 0);
+    signal iConvert     : STD_LOGIC                     := '0';
+    signal iDone        : STD_LOGIC                     := '0';
+    signal iDisplay     : STD_LOGIC                     := '0';
+    signal iPrevious    : STD_LOGIC                     := '0';
+    signal iHold        : STD_LOGIC                     := '0';
+    signal iBinary      : STD_LOGIC_VECTOR(11 downto 0) := (others => '0');
+    signal iBCD         : STD_LOGIC_VECTOR(23 downto 0) := (others => '0');
+    signal iDataOut     : STD_LOGIC_VECTOR(23 downto 0) := (others => '0');
+    signal iHoldCounter : STD_LOGIC_VECTOR(28 downto 0) := (others => '0');
 
 begin
-    ThreePointThreeVolt <= '1';
-    iWE                 <= "1";
-
     Serial : SPI port map(
         Clock   => SystemClock,
         MISO    => MISO,
         Reset   => Reset,
+        Hold    => iHold,
         SCLK    => SCLK,
         CS      => CS,
         Convert => iConvert,
-        Data    => BinaryTemp
+        Data    => iBinary
     );
 
     B2D : BinToBCD port map(
         Clock   => SystemClock,
         Reset   => Reset,
         Convert => iConvert,
-        Binary  => BinaryTemp,
+        Binary  => iBinary,
         Done    => iDone,
-        BCD     => BCDTemp
+        BCD     => iBCD
     );
 
-    RAM24x2 : DPRAM24x2 port map(
-        clka  => SystemClock,
-        wea   => iWE,
-        addra => iAddrA,
-        dina  => iDataIn,
-        clkb  => SystemClock,
-        addrb => iAddrB,
-        doutb => iDataOut
+    MEM : DPRAM port map(
+        Clock   => SystemClock,
+        R       => iHold,
+        W       => iDone,
+        DataIn  => iBCD,
+        Display => iDisplay,
+        DataOut => iDataOut
     );
 
     Display : LCD port map(
         Clock   => SystemClock,
         Reset   => Reset,
-        Display => iDone,
-        -- BCD     => BCDTemp,
-        Data   => LCD_Data,
-        Enable => LCD_En,
-        RS     => LCD_RS,
-        RW     => LCD_RW
+        Display => iDisplay,
+        BCD     => iDataOut,
+        Data    => LCD_Data,
+        Enable  => LCD_En,
+        RS      => LCD_RS,
+        RW      => LCD_RW
     );
 
     RTxd : Rs232Txd port map(
         Reset => Reset,
-        Send  => iDone,
+        Send  => iDisplay,
         Clock => SystemClock,
-        BCD   => BCDTemp,
+        BCD   => iDataOut,
         Txd   => Txd
     );
 
     SSD : SevenSegDecoder port map(
-        BCD   => BCDTemp,
+        BCD   => iDataOut,
         Clock => SystemClock,
         An    => An,
         Ca    => Ca,
@@ -177,4 +173,21 @@ begin
         Cg    => Cg
     );
 
+    process (SystemClock)
+    begin
+        if SystemClock'EVENT and SystemClock = '1' then
+            iPrevious <= Previous;
+            if Previous = '1' and iPrevious = '0' and iHold = '0' then
+                iHold <= '1';
+            elsif iHoldCounter = "11111111111111111111111111111" then
+                iHold        <= '0';
+                iHoldCounter <= (others => '0');
+            elsif iHold = '1' then
+                iHold        <= '1';
+                iHoldCounter <= iHoldCounter + '1';
+
+            end if;
+        end if;
+    end process;
+    ThreePointThreeVolt <= '1';
 end Behavioral;

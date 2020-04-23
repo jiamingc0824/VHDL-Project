@@ -52,7 +52,6 @@ architecture Behavioral of LCD is
     signal iCounter       : STD_LOGIC_VECTOR(20 downto 0) := (others => '0');
     signal iCharSent      : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
     signal iData          : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
-    signal iBCD           : STD_LOGIC_VECTOR(23 downto 0) := x"123475"; --For Debug Purpose
 
     constant ResetAddr : STD_LOGIC_VECTOR(7 downto 0) := x"02";
 
@@ -92,31 +91,6 @@ architecture Behavioral of LCD is
     others => "00100000" --PlaceHolder
     );
 begin
-    --For Debug
-    -- LED(3 downto 0) <= iCharSent;
-    -- LED(7 downto 4) <= (others => '0');
-    with presState select LED (3 downto 0) <=
-        "0001" when stInit1,
-        "0010" when stInit2,
-        "0011" when stFunc,
-        "0100" when stEntry,
-        "0101" when stDisplay,
-        "0110" when stClear,
-        "0111" when stReady,
-        "1000" when stWrite,
-        "1010" when stResetAddr,
-        "1011" when stComplete,
-        "0000" when others;
-
-    LED (6 downto 4) <= "001" when transmitState = stIdle else
-    "010" when transmitState = stReady else
-    "011" when transmitState = stEnable else
-    "100" when transmitState = stWait else
-    "101" when transmitState = stComplete else
-    "000";
-    LED(7) <= isAllTransmit;
-    --Debug End
-
     process (Clock)
     begin
         if Clock'EVENT and Clock = '1' then
@@ -251,10 +225,10 @@ begin
                         case presState is
                             when stInit1 =>
                                 RS <= '0';
-                                if iStage = '0' and iCounter = "00000000000000000100" then --750000 Cycle 10110111000110110000
+                                if iStage = '0' and iCounter = "10110111000110110000" then --750000 Cycle 
                                     iCounter      <= (others => '0');
                                     transmitState <= stEnable;
-                                elsif iStage = '1' and iCounter = "00000000000000000100" then --205000 Cycle 00110010000011001000
+                                elsif iStage = '1' and iCounter = "00110010000011001000" then --205000 Cycle 
                                     iCounter      <= (others => '0');
                                     transmitState <= stEnable;
                                 else
@@ -263,7 +237,7 @@ begin
                                 end if;
                             when stInit2 =>
                                 RS <= '0';
-                                if iStage = '0' and iCounter = "00000000000000001000" then --5000 Cycle
+                                if iStage = '0' and iCounter = "00000001001110001000" then --5000 Cycle
                                     iCounter      <= (others => '0');
                                     transmitState <= stEnable;
                                 elsif iStage = '1' and iCounter = "00000000011111010000" then --2000 Cycle
@@ -305,7 +279,7 @@ begin
                         Enable <= '0';
                         case presState is
                             when stClear | stResetAddr =>
-                                if iCounter = "00010100000001010000" then --82000 Cycle 00010100000001010000
+                                if iCounter = "00010100000001010000" then --82000 Cycle 
                                     iCounter <= (others => '0');
                                     if iStage = '1' then
                                         transmitState <= stComplete;

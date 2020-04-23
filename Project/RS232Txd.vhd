@@ -31,7 +31,6 @@ architecture Behavioral of RS232Txd is
     signal iRSClkDiv                     : STD_LOGIC_VECTOR(12 downto 0) := (others => '0');
     signal iNoBitsSent                   : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
     signal iNoCharSent                   : STD_LOGIC_VECTOR(4 downto 0)  := (others => '0');
-    signal iBCD                          : STD_LOGIC_VECTOR(23 downto 0) := x"123475"; --For Debug Purpose
 
     --Display Character Sequence
     type CharMemory is array (0 to 15) of STD_LOGIC_VECTOR(7 downto 0);
@@ -59,7 +58,7 @@ begin
         if Clock'event and Clock = '1' then
             if Reset = '1' or iReset = '1' then
                 iRSClockEnable <= '0';
-                iRSClkDiv      <= "0010111010100"; --0010111010100 Actual Timing
+                iRSClkDiv      <= "0010111010100";
             else
                 iSend <= Send;
             end if;
@@ -67,8 +66,8 @@ begin
                 iRSClockEnable <= '1';
             end if;
             if iRSClockEnable = '1' then
-                if iRSClkDiv = "1101000101011" then --1101000101011 Actual timing
-                    iRSClkDiv <= "0010111010100";       --0010111010100 Actual timing
+                if iRSClkDiv = "1101000101011" then
+                    iRSClkDiv <= "0010111010100";
                 else
                     iRSClkDiv <= iRSClkDiv + '1';
                 end if;
@@ -149,5 +148,4 @@ begin
     CharSeq(8)(7 downto 0)  <= x"3" & BCD(11 downto 8);
     CharSeq(10)(7 downto 0) <= x"3" & BCD(7 downto 4);
     CharSeq(11)(7 downto 0) <= x"3" & BCD(3 downto 0);
-
 end Behavioral;

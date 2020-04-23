@@ -11,8 +11,7 @@ entity SPI is
         SCLK    : out STD_LOGIC;
         CS      : out STD_LOGIC;
         Convert : out STD_LOGIC;
-        Data    : out STD_LOGIC_VECTOR(11 downto 0);
-        Testing : out STD_LOGIC_VECTOR(15 downto 0)
+        Data    : out STD_LOGIC_VECTOR(11 downto 0)
     );
 end SPI;
 
@@ -26,7 +25,7 @@ architecture Behavioral of SPI is
     signal nextState                     : stateType;
     signal iReset                        : STD_LOGIC                     := '0';
     signal iSCLK                         : STD_LOGIC                     := '0';
-    signal iClockDiv                     : STD_LOGIC_VECTOR(24 downto 0) := "0111111111111111111110000";
+    signal iClockDiv                     : STD_LOGIC_VECTOR(24 downto 0) := (others => '0');
     signal iSCLKDiv                      : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
     signal iBuffer                       : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
     signal iNoBitReceived                : STD_LOGIC_VECTOR(4 downto 0)  := (others => '0');
@@ -35,7 +34,7 @@ begin
     begin
         if Clock'event and Clock = '1' then
             if Reset = '1' or iReset = '1' or Hold = '1' then
-                iClockDiv <= "0111111111111110000000000"; -- (others => '0') Actual Timing
+                iClockDiv <= (others => '0');
                 iSCLKDiv  <= (others => '0');
             else
                 iClockDiv <= iClockDiv + '1';
@@ -89,6 +88,4 @@ begin
     CS      <= not iClockDiv(24);
     iSCLK   <= iSCLKDiv(3);
     SCLK    <= iSCLK;
-    Testing <= iBuffer;
-
 end Behavioral;

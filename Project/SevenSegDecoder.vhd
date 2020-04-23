@@ -18,7 +18,7 @@ entity SevenSegDecoder is
 end SevenSegDecoder;
 
 architecture Behavioral of SevenSegDecoder is
-
+    signal iDigitOut : std_logic_vector(6 downto 0)  := (others => '0');
     signal iCount16  : std_logic_vector(15 downto 0) := (others => '0');
     signal iSeg      : STD_LOGIC_VECTOR(6 downto 0)  := (others => '0');
     signal Q         : STD_LOGIC_VECTOR(3 downto 0)  := (others => '0');
